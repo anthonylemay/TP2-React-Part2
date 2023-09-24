@@ -23,7 +23,7 @@ const Category = () => {
                 <Row className='p-5 mt-4'>
 						{data?.map((meal) => (
 							<Col key={meal.strMeal} xs={12} sm={12} md={6} lg={4} xl={4} className='text-left'>
-                                <FavoriteButton meals={meal}/>
+                                <FavoriteButton meals={meal} categoryName={params.categoryName}/>
                                 <Link to={`/category/${params.categoryName}/${meal.idMeal}`}>
                                 <Card style={{ width: '18rem' }} className='m-4 p-3'>
                                 <Card.Img variant="top" src={`${meal.strMealThumb}`} />

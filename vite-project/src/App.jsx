@@ -3,6 +3,7 @@ import {QueryClient, QueryClientProvider} from 'react-query'
 import Categories from './meals/components/categories'
 import Category from './meals/components/category'
 import Meal from './meals/components/meal'
+import FavoriteMeals from './favorites/components/favoriteMeals'
 
 
 const queryClient = new QueryClient()
@@ -14,6 +15,8 @@ function App() {
           <Route index element={<Categories />} />
           <Route path="/category/:categoryName" element={<Category />}/>
           <Route path="/category/:categoryName/:mealId" element={<Meal />} />
+          <Route path="/favorites" element={<FavoriteMeals />} />
+
       </Routes>
 
     </QueryClientProvider>

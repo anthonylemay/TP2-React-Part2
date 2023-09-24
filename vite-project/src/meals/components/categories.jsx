@@ -23,6 +23,7 @@ const Categories = () => {
 						))}
 					</Row>
 				</Container>
+				<Link to="/favorites" className="navbar-brand">Favorite Meals</Link>
 			</FetchState>
 		</Container>
 	)

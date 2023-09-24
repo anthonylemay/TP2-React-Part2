@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { addFavorite, removeFavorite } from '../store/favoritesSlice';
 import { favoritesSelector } from "../store/favoriteSelectors";
 
-const FavoriteButton = ( { meals }) => {
+const FavoriteButton = ( { meals, categoryName }) => {
     const dispatch = useDispatch();
 
     const favorites = useSelector(favoritesSelector);
@@ -12,9 +12,9 @@ const FavoriteButton = ( { meals }) => {
         if (isFavorite) {
             return dispatch(removeFavorite(meals));
         } else {
-        return dispatch(addFavorite(meals))
+            return dispatch(addFavorite({ meal: meals, categoryName: categoryName }));
         }
-    };
+    };    
 
     return(
 <button type="button" className="bg-color-black" onClick={onClick}>
