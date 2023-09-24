@@ -1,6 +1,5 @@
 const reducers = {
     addFavorite: (state, action) => {
-        // Note: Instead of directly pushing, we're ensuring the structure is correct.
         const favoriteMeal = {
             ...action.payload.meal,
             categoryName: action.payload.categoryName
