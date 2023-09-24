@@ -17,7 +17,7 @@ const FavoriteButton = ( { meals, categoryName }) => {
     };    
 
     return(
-<button type="button" className="bg-color-black" onClick={onClick}>
+<button type="button" className="bg-color-black my-2" onClick={onClick}>
     {isFavorite ? (
         <>
        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-star-fill" viewBox="0 0 16 16">
