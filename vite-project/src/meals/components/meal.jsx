@@ -36,16 +36,16 @@ const Meal = () => {
                 <Container>
                     {data?.map((mealCard) => (
                         <Row key={mealCard.strMeal}>
-                            <Col md={8}>
-                                <Card style={{ width: '100%' }}>
-                                    <Card.Img variant="top" src={`${mealCard.strMealThumb}`} />
+                            <Col className='d-flex align-items-center justify-content-center'>
+                                <Card className="d-flex align-items-center justify-content-center" style={{ width: '100%' }}>
+                                    <Card.Img className="mt-4" style={{ width: "40%", borderRadius: "15%" }} variant="top" src={`${mealCard.strMealThumb}`} />
                                     <Card.Body>
                                         <Card.Title className="text-center">{mealCard.strMeal}</Card.Title>
                                         <FavoriteButton meals={mealCard} categoryName={params.categoryName}/>
                                         <Link to={`/category/${params.categoryName}`} className="navbar-brand"><Card.Text className="text-center"><b>Category:</b> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-tag-fill" viewBox="0 0 16 16">
   <path d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
 </svg>{mealCard?.strCategory}</Card.Text></Link>
-                                        <Card.Text className="text-left"><b>Instructions:</b> {mealCard?.strInstructions}</Card.Text>
+                                        <Card.Text className="mt-4 text-left"><b>Instructions:</b><br/>{mealCard?.strInstructions}</Card.Text>
                                         <Accordion defaultActiveKey="0">
                                             <Accordion.Item eventKey="1">
                                                 <Accordion.Header>Ingredients & Measurements</Accordion.Header>
